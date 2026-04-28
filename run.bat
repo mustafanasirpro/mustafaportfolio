@@ -1,0 +1,3 @@
+@echo off
+echo Opening Portfolio locally...
+start index.html

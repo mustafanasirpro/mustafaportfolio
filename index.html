@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Ghulam Mustafa Nasir — CS Student & Developer</title>
+  <meta name="description"
+    content="Portfolio of Ghulam Mustafa Nasir, Computer Science student at COMSATS Sahiwal with 3.82 CGPA. Frontend developer, Python & Java programmer." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ETHEREAL BACKGROUND LAYERS -->
+  <div class="bg-layer" id="bgLayer">
+    <canvas id="nebula"></canvas>
+    <div class="aurora a1"></div>
+    <div class="aurora a2"></div>
+    <div class="aurora a3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-morph">
+      <div class="loader-blob"></div>
+      <div class="loader-text" id="loaderCode">initializing</div>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cur" id="cur"></div>
+  <div class="cur-aura" id="curAura"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">G<span class="logo-accent">M</span>N</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link" data-s="about">About</a>
+        <a href="#skills" class="nav-link" data-s="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-s="projects">Work</a>
+        <a href="#education" class="nav-link" data-s="education">Journey</a>
+        <a href="#contact" class="nav-link nav-cta" data-s="contact">Say Hello</a>
+      </div>
+      <button class="burger" id="burger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mob-nav" id="mobNav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Work</a>
+    <a href="#education">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-ring"></span>
+        <span class="hero-badge-text" id="typedRole"></span>
+        <span class="type-caret">|</span>
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="title-word tw1">Ghulam</span>
+        <span class="title-word tw2 glow-text">Mustafa</span>
+        <span class="title-word tw3">Nasir</span>
+      </h1>
+
+      <p class="hero-sub">
+        CS Student at <strong>COMSATS Sahiwal</strong> · CGPA <strong class="highlight">3.82/4.00</strong><br />
+        Crafting digital experiences — one pixel at a time.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" id="btnProjects">
+          <span class="btn-shine"></span>
+          <span class="btn-label">Explore Work</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn-outline">Let's Talk</a>
+        <a href="resume.pdf" class="btn-outline" download>Resume ↓</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-val highlight">3.82</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-val">5+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🟢</span>
+          <span class="stat-label">Open to Work</span>
+        </div>
+      </div>
+
+      <div class="hero-tags">
+        <span class="htag">🎓 4th Sem</span>
+        <span class="htag">🐍 Python</span>
+        <span class="htag">☕ Java OOP</span>
+        <span class="htag">🌐 Frontend</span>
+        <span class="htag">📊 Data Science</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span class="label-text">About Me</span>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-visual reveal-left">
+          <div class="morph-avatar">
+            <div class="morph-ring r1"></div>
+            <div class="morph-ring r2"></div>
+            <div class="morph-ring r3"></div>
+            <div class="morph-core">GM</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <h2 class="big-heading">The Story<br /><span class="accent-text">Behind the Code</span></h2>
+
+          <div class="about-text">
+            <p>I'm a <strong>4th-semester Computer Science student</strong> at COMSATS University Islamabad, Sahiwal
+              Campus — maintaining a <strong class="highlight">3.82/4.00 CGPA</strong> while building real projects that
+              solve real problems.</p>
+            <p>My journey started at <strong>Cadet College Okara</strong>, where I built discipline and leadership. I
+              pivoted from Pre-Medical to CS because code lets you build worlds from nothing. Currently sharpening my
+              <strong>frontend skills</strong> and diving deep into <strong>data science &amp; ML</strong>.</p>
+            <p>Seeking an <strong>internship</strong> where I can apply what I know, learn what I don't, and contribute
+              to something meaningful.</p>
+          </div>
+
+          <div class="info-pills">
+            <div class="pill"><span class="pill-icon">📍</span> Pir Mahal, Punjab</div>
+            <div class="pill"><span class="pill-icon">📧</span> <a
+                href="mailto:mustafanasirpro@gmail.com">mustafanasirpro@gmail.com</a></div>
+            <div class="pill"><span class="pill-icon">📞</span> <a href="tel:+923148584883">+92 314 858 4883</a></div>
+            <div class="pill"><span class="pill-icon">🎓</span> COMSATS Sahiwal · 2024–2028</div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-item"><span class="stat-num" data-target="3.82" data-dec="2">0</span><span
+                class="stat-lbl">CGPA</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="5" data-dec="0">0</span><span
+                class="stat-lbl">Projects</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="4" data-dec="0">0</span><span
+                class="stat-lbl">Semester</span></div>
+            <div class="stat-item"><span class="stat-num" data-target="10" data-dec="0">0</span><span
+                class="stat-lbl">Skills</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span class="label-text">Skill Stack</span>
+      </div>
+      <h2 class="big-heading center reveal">What I <span class="accent-text">Work With</span></h2>
+      <p class="section-desc center reveal">A growing arsenal — constantly expanding with every project and course.</p>
+
+      <div class="skills-grid reveal">
+        <!-- Languages -->
+        <div class="skill-card" data-glow="#64c9e3">
+          <div class="skill-card-header">
+            <span class="skill-emoji">🧬</span>
+            <span class="skill-cat">Languages</span>
+          </div>
+          <div class="skill-bars">
+            <div class="sbar" data-pct="65">
+              <div class="sbar-info"><span>Python</span><span class="sbar-level">Intermediate</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:65%;--clr:#64c9e3"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="60">
+              <div class="sbar-info"><span>Java (OOP)</span><span class="sbar-level">Intermediate</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:60%;--clr:#cefc98"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="45">
+              <div class="sbar-info"><span>C++ (DSA)</span><span class="sbar-level">Beginner+</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:45%;--clr:#2c6f86"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card" data-glow="#cefc98">
+          <div class="skill-card-header">
+            <span class="skill-emoji">🌐</span>
+            <span class="skill-cat">Frontend</span>
+          </div>
+          <div class="skill-bars">
+            <div class="sbar" data-pct="70">
+              <div class="sbar-info"><span>HTML5</span><span class="sbar-level">Intermediate</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:70%;--clr:#64c9e3"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="55">
+              <div class="sbar-info"><span>CSS3</span><span class="sbar-level">Beg → Inter</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:55%;--clr:#cefc98"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="45">
+              <div class="sbar-info"><span>JavaScript</span><span class="sbar-level">Beginner</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:45%;--clr:#f4f4ec"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data -->
+        <div class="skill-card" data-glow="#2c6f86">
+          <div class="skill-card-header">
+            <span class="skill-emoji">📊</span>
+            <span class="skill-cat">Data Science</span>
+          </div>
+          <div class="skill-bars">
+            <div class="sbar" data-pct="50">
+              <div class="sbar-info"><span>Pandas / NumPy</span><span class="sbar-level">Beginner</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:50%;--clr:#cefc98"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="35">
+              <div class="sbar-info"><span>Machine Learning</span><span class="sbar-level">Beginner</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:35%;--clr:#2c6f86"></div>
+              </div>
+            </div>
+            <div class="sbar" data-pct="60">
+              <div class="sbar-info"><span>Office 365</span><span class="sbar-level">Intermediate</span></div>
+              <div class="sbar-track">
+                <div class="sbar-fill" style="--pct:60%;--clr:#64c9e3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating skill atoms -->
+      <div class="skill-atoms reveal">
+        <div class="atom" style="--ac:#64c9e3"><span>🐍</span><small>Python</small></div>
+        <div class="atom" style="--ac:#cefc98"><span>☕</span><small>Java</small></div>
+        <div class="atom" style="--ac:#f4f4ec"><span>🌐</span><small>HTML</small></div>
+        <div class="atom" style="--ac:#2c6f86"><span>🎨</span><small>CSS</small></div>
+        <div class="atom" style="--ac:#cefc98"><span>⚡</span><small>JS</small></div>
+        <div class="atom" style="--ac:#64c9e3"><span>🔷</span><small>C++</small></div>
+        <div class="atom" style="--ac:#cefc98"><span>📊</span><small>Pandas</small></div>
+        <div class="atom" style="--ac:#2c6f86"><span>🤖</span><small>ML</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span class="label-text">Featured Work</span>
+      </div>
+      <h2 class="big-heading center reveal">Featured <span class="accent-text">Projects</span></h2>
+      <p class="section-desc center reveal">Real problems. Real solutions. Real code.</p>
+
+      <div class="projects-masonry">
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#64c9e3;--ac2:#2c6f86"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">❓</span>
+              <div class="pcard-tags"><span>Java</span><span>OOP</span><span>Swing</span></div>
+            </div>
+            <h3 class="pcard-title">Quiz System</h3>
+            <p class="pcard-desc">Interactive quiz app with real-time scoring, timer-based rounds, category filtering.
+              Clean OOP architecture — each quiz, question, and user is a fully encapsulated class.</p>
+            <div class="pcard-tech"><span>Java</span><span>OOP</span><span>Mobile UI</span><span>Score Engine</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#cefc98;--ac2:#64c9e3"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">📱</span>
+              <div class="pcard-tags"><span>Android</span><span>Java</span><span>XML</span></div>
+            </div>
+            <h3 class="pcard-title">Mobile Apps Collection</h3>
+            <p class="pcard-desc">Calculator, to-do list, unit converter, budget tracker — each reinforcing Java mobile
+              patterns, XML UI design, and event-driven programming.</p>
+            <div class="pcard-tech"><span>Android</span><span>Java</span><span>XML</span><span>SQLite</span></div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#2c6f86;--ac2:#cefc98"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">🖥️</span>
+              <div class="pcard-tags"><span>Java</span><span>Desktop</span><span>GUI</span></div>
+            </div>
+            <h3 class="pcard-title">Desktop Application Suite</h3>
+            <p class="pcard-desc">Student record management, file organizer, inventory tool. Demonstrates event
+              listeners, form validation, and persistent file-based storage.</p>
+            <div class="pcard-tech"><span>Swing</span><span>AWT</span><span>File I/O</span><span>GUI</span></div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#64c9e3;--ac2:#cefc98"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">🔍</span>
+              <div class="pcard-tags"><span>HTML/CSS</span><span>JS</span><span>Backend</span></div>
+            </div>
+            <h3 class="pcard-title">Lost & Found Portal</h3>
+            <p class="pcard-desc">Campus web portal for reporting lost items. User auth, image upload, search & filter,
+              and claim request system. Full-cycle web project.</p>
+            <div class="pcard-tech"><span>HTML</span><span>CSS</span><span>JS</span><span>CRUD</span><span>Auth</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#351919;--ac2:#64c9e3"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">🛡️</span>
+              <div class="pcard-tags"><span>Python</span><span>Security</span><span>ML</span></div>
+            </div>
+            <h3 class="pcard-title">Insider Threat Detection</h3>
+            <p class="pcard-desc">Cybersecurity project analyzing behavior patterns to flag insider threats. Anomaly
+              detection, risk scores, and alert reports for suspicious access.</p>
+            <div class="pcard-tech"><span>Python</span><span>Pandas</span><span>Anomaly</span><span>Security</span>
+            </div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcard reveal" data-tilt>
+          <div class="pcard-aurora" style="--ac1:#cefc98;--ac2:#2c6f86"></div>
+          <div class="pcard-content">
+            <div class="pcard-head">
+              <span class="pcard-emoji">📅</span>
+              <div class="pcard-tags"><span>Python</span><span>Algorithm</span><span>CSP</span></div>
+            </div>
+            <h3 class="pcard-title">Timetable Generator</h3>
+            <p class="pcard-desc">Automated clash-free timetable scheduler using constraint-satisfaction. Handles
+              courses, rooms, teachers, and time slots algorithmically.</p>
+            <div class="pcard-tech"><span>Python</span><span>Algorithms</span><span>CSP</span><span>DSA</span></div>
+            <div class="pcard-actions">
+              <a href="#" class="pcard-btn">View →</a>
+              <a href="#" class="pcard-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="section">
+    <div class="wrap">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span class="label-text">My Journey</span>
+      </div>
+      <h2 class="big-heading center reveal">Education & <span class="accent-text">Journey</span></h2>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-pulse"></div>
+          </div>
+          <div class="tl-date">2024 — 2028</div>
+          <div class="tl-card">
+            <span class="tl-emoji">🎓</span>
+            <div class="tl-body">
+              <h3>BS Computer Science</h3>
+              <p class="tl-inst">COMSATS University Islamabad, Sahiwal Campus</p>
+              <div class="tl-badge highlight-badge">CGPA: 3.82 / 4.00</div>
+              <p class="tl-desc">4th semester. Strong focus on programming, data structures, software development, and
+                data science. Top performer in cohort.</p>
+              <div class="tl-pills"><span>OOP</span><span>DSA</span><span>Web
+                  Dev</span><span>Python</span><span>DBMS</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-pulse"></div>
+          </div>
+          <div class="tl-date">2021 — 2023</div>
+          <div class="tl-card">
+            <span class="tl-emoji">📚</span>
+            <div class="tl-body">
+              <h3>Intermediate (FSc Pre-Medical)</h3>
+              <p class="tl-inst">Faran Group of Colleges, Pirmahal</p>
+              <div class="tl-badge">80% Marks</div>
+              <p class="tl-desc">Completed FSc Pre-Medical with Additional Mathematics. Pivoted to CS, applying
+                analytical discipline to software engineering.</p>
+              <div class="tl-pills"><span>Mathematics</span><span>Analytical</span><span>Problem Solving</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker">
+            <div class="tl-pulse"></div>
+          </div>
+          <div class="tl-date">2018 — 2021</div>
+          <div class="tl-card">
+            <span class="tl-emoji">🪖</span>
+            <div class="tl-body">
+              <h3>Matriculation</h3>
+              <p class="tl-inst">Cadet College Okara — The School of Army</p>
+              <div class="tl-badge">Residential · Distinction</div>
+              <p class="tl-desc">Prestigious Army-affiliated institution. Built discipline, leadership, resilience, and
+                the ability to thrive under pressure.</p>
+              <div class="tl-pills">
+                <span>Leadership</span><span>Discipline</span><span>Resilience</span><span>Teamwork</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span class="label-text">Get in Touch</span>
+      </div>
+      <h2 class="big-heading center reveal">Let's <span class="accent-text">Connect</span></h2>
+      <p class="section-desc center reveal">Open to internships, collaborations, and learning opportunities.</p>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal-left">
+          <a href="mailto:mustafanasirpro@gmail.com" class="contact-tile">
+            <div class="tile-icon">📧</div>
+            <div>
+              <div class="tile-label">Email</div>
+              <div class="tile-val">mustafanasirpro@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+923148584883" class="contact-tile">
+            <div class="tile-icon">📱</div>
+            <div>
+              <div class="tile-label">Phone</div>
+              <div class="tile-val">+92 314 858 4883</div>
+            </div>
+          </a>
+          <div class="contact-tile">
+            <div class="tile-icon">📍</div>
+            <div>
+              <div class="tile-label">Location</div>
+              <div class="tile-val">Pir Mahal, Punjab, Pakistan</div>
+            </div>
+          </div>
+          <div class="contact-tile">
+            <div class="tile-icon">🎓</div>
+            <div>
+              <div class="tile-label">University</div>
+              <div class="tile-val">COMSATS Sahiwal · CS 4th Sem</div>
+            </div>
+          </div>
+          <div class="avail-pill">
+            <span class="avail-dot"></span>
+            Currently <strong>available</strong> for internship opportunities
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="glass-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-field">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-field">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Subject</label>
+              <input type="text" placeholder="Internship / Collaboration" required />
+            </div>
+            <div class="form-field">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell me about the opportunity…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-w">
+              <span class="btn-shine"></span>
+              <span class="btn-label btn-text">Send Message →</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand">G<span class="logo-accent">M</span>N</div>
+        <p class="footer-copy">© 2025 Ghulam Mustafa Nasir · Built with 💻 &amp; ☕ · COMSATS Sahiwal</p>
+        <div class="footer-links">
+          <a href="mailto:mustafanasirpro@gmail.com">Email</a>
+          <a href="tel:+923148584883">Phone</a>
+          <a href="#hero">Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"><span id="toastMsg"></span></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
